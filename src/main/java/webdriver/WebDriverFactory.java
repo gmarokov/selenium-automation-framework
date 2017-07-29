@@ -29,20 +29,20 @@ public class WebDriverFactory {
      *
      * @return WebDriver instance
      */
-    public static WebDriver getInstance(Browser browser) {
+    public static WebDriver getInstance(String browserName) {
 
         WebDriver webDriver = null;
 
-        if (CHROME.equals(browser.getName())) {
+        if (CHROME.equals(browserName)) {
             ChromeDriverManager.getInstance().setup();
             webDriver = new ChromeDriver();
         }
-        else if (FIREFOX.equals(browser.getName())) {
+        else if (FIREFOX.equals(browserName)) {
             FirefoxDriverManager.getInstance().setup();
             webDriver = new FirefoxDriver();
 
         }
-        else if (INTERNET_EXPLORER.equals(browser.getName())) {
+        else if (INTERNET_EXPLORER.equals(browserName)) {
             InternetExplorerDriverManager.getInstance().setup();
             webDriver = new InternetExplorerDriver();
         }

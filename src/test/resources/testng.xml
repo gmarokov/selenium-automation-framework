@@ -2,7 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Tests" verbose="5" data-provider-thread-count="1">
 	<test name="Test1">
-		<parameter name="path" value="/test"/>
 		<classes>
 		    <class name="pages.HomePageTest"/>
 		</classes>

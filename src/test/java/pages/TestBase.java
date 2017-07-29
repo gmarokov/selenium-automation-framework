@@ -11,41 +11,24 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import utilities.Browser;
-import utilities.PropertyLoader;
-import webdriver.WebDriverFactory;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
 
     private static final String SCREENSHOT_FOLDER = "target/screenshots/";
     private static final String SCREENSHOT_FORMAT = ".png";
 
-    protected WebDriver webDriver;
-    protected String websiteUrl;
-    protected Browser browser;
-
     @BeforeClass
     public void init() {
-        websiteUrl = PropertyLoader.loadProperty("site.url");
-
-        browser = new Browser();
-        browser.setName(PropertyLoader.loadProperty("browser.name"));
-        browser.setVersion(PropertyLoader.loadProperty("browser.version"));
-
-        String username = PropertyLoader.loadProperty("user.username");
-        String password = PropertyLoader.loadProperty("user.password");
-
-        webDriver = WebDriverFactory.getInstance(browser);
-        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        Browser.Initialize();
     }
 
     @AfterSuite(alwaysRun = true)
     public void tearDown() {
-        if (webDriver != null) {
-            webDriver.quit();
+        if (Browser.Driver() != null) {
+            Browser.Driver().quit();
         }
     }
 
@@ -53,7 +36,7 @@ public abstract class TestBase {
     public void setScreenshot(ITestResult result) {
         if (!result.isSuccess()) {
             try {
-                WebDriver returned = new Augmenter().augment(webDriver);
+                WebDriver returned = new Augmenter().augment(Browser.Driver());
                 if (returned != null) {
                     File f = ((TakesScreenshot) returned).getScreenshotAs(OutputType.FILE);
                     try {
