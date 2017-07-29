@@ -2,7 +2,7 @@
 
 Example skeleton for quick start with Selenium WebDriver and TestNG.
 
-##Dependencies
+## Dependencies
 - Java
 - Maven
 - Selenium WebDriver
@@ -15,7 +15,7 @@ Example skeleton for quick start with Selenium WebDriver and TestNG.
 - Page factory provided by WebDriver
 - Readability and scalability
 
-##Improvements
+## Improvements
 - Test methods can return itself for easy chaining
 - Generic class for invoking getPage static method for creating new page instance. Probably using Reflection
 - Reporting API or TestNG build in reports
@@ -24,5 +24,5 @@ Example skeleton for quick start with Selenium WebDriver and TestNG.
 - Generators
 - Logging with Log4j
 
-##Notes
+## Notes
 
