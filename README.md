@@ -1,4 +1,4 @@
-# SeleniumAutomationFramework
+# Automation Framework with Selenium
 
 Example skeleton for quick start with Selenium WebDriver and TestNG.
 
