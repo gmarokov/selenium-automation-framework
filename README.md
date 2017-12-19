@@ -16,4 +16,9 @@ Example skeleton for quick start with Selenium WebDriver and TestNG.
 - Generators
 - Logging with Log4j
 
+## Credits:
+
+Selenium2-Java-QuickStart-Archetype
+Blackbox Automated Testing Framework
+
 
