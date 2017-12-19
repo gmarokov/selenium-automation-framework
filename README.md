@@ -18,7 +18,7 @@ Example skeleton for quick start with Selenium WebDriver and TestNG.
 
 ## Credits:
 
-Selenium2-Java-QuickStart-Archetype
-Blackbox Automated Testing Framework
+- Selenium2-Java-QuickStart-Archetype
+- Blackbox Automated Testing Framework
 
 
