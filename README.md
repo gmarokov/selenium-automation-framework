@@ -10,10 +10,10 @@ Example skeleton for quick start with Selenium WebDriver and TestNG.
 - WebDriverManager
 
 ## Improvements
-- Test methods can return page for easy chaining
-- Generic class for invoking getPage static method for creating new page instance. Probably using Reflection
+- Test methods can return page intances for easy chaining
+- Generic class for invoking getPage static method for creating new page instance using reflection
 - Using spreadsheets to read data for input
-- Generators
+- Random generators
 - Logging with Log4j
 
 ## Credits
