@@ -1,4 +1,4 @@
-# Automation Framework with Selenium
+# Automation UI testing framework with Selenium
 
 Example skeleton for quick start with Selenium WebDriver and TestNG.
 
